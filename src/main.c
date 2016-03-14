@@ -223,31 +223,59 @@ static void app_focus_changed(bool focused) {
   }
 }
 
+static void timestamp(const char * name) {
+//   static time_t sec;
+//   time_t sec_old = sec;
+//   static uint16_t ms;
+//   uint16_t ms_old = ms;
+  
+//   int32_t t, t_old;
+
+//   time_ms(&sec, &ms);
+
+//   t = (int32_t)1000*(int32_t)sec + (int32_t)ms;
+//   t_old = (int32_t)1000*(int32_t)sec_old + (int32_t)ms_old;
+
+//   // dt is the time spent in milliseconds
+//   int dt = t - t_old;
+  
+//    APP_LOG(APP_LOG_LEVEL_DEBUG,"%s: %d ms", name, dt);
+}
+
 static void init() {
+  timestamp("zero point");
   setlocale(LC_ALL, "");
+  timestamp("setlocale");
 
   // init settings
   Settings_init();
+  timestamp("Settings_init");
 
   // init weather system
   Weather_init();
+  timestamp("Weather_init");
 
   // init the messaging thing
   messaging_init(redrawScreen);
+  timestamp("init the messaging thing");
 
   // Create main Window element and assign to pointer
   mainWindow = window_create();
+  timestamp("window_create");
 
   // Set handlers to manage the elements inside the Window
   window_set_window_handlers(mainWindow, (WindowHandlers) {
     .load = main_window_load,
     .unload = main_window_unload
   });
+  timestamp("window_set_window_handlers");
 
   // Show the Window on the watch, with animated=true
   window_stack_push(mainWindow, true);
+  timestamp("window_stack_push");
 
   windowLayer = window_get_root_layer(mainWindow);
+  timestamp("window_get_root_layer");
 
   // Register with TickTimerService
   if(globalSettings.updateScreenEverySecond) {
@@ -257,19 +285,23 @@ static void init() {
     tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
     updatingEverySecond = false;
   }
+  timestamp("Register with TickTimerService");
 
   bool connected = bluetooth_connection_service_peek();
   bluetoothStateChanged(connected);
   bluetooth_connection_service_subscribe(bluetoothStateChanged);
+  timestamp("bluetooth");
 
   // register with battery service
   battery_state_service_subscribe(batteryStateChanged);
+  timestamp("register with battery service");
 
   // set up focus change handlers
   app_focus_service_subscribe_handlers((AppFocusHandlers){
     .did_focus = app_focus_changed,
     .will_focus = app_focus_changing
   });
+  timestamp("set up focus change handlers");
 }
 
 static void deinit() {

@@ -6,13 +6,13 @@
         "KEY_FORECAST_TEMP_LOW": 27,
         "KEY_SETTING_ALTCLOCK_NAME": 28,
         "KEY_SETTING_ALTCLOCK_OFFSET": 29,
-        "KEY_SETTING_DISABLE_AUTOBATTERY": 33,
         "KEY_SETTING_BT_VIBE": 11,
         "KEY_SETTING_CLOCK_FONT_ID": 18,
         "KEY_SETTING_COLOR_BG": 7,
         "KEY_SETTING_COLOR_SIDEBAR": 8,
         "KEY_SETTING_COLOR_TIME": 6,
         "KEY_SETTING_DECIMAL_SEPARATOR": 30,
+        "KEY_SETTING_DISABLE_AUTOBATTERY": 33,
         "KEY_SETTING_DISABLE_WEATHER": 17,
         "KEY_SETTING_HEALTH_USE_DISTANCE": 31,
         "KEY_SETTING_HEALTH_USE_RESTFUL_SLEEP": 32,
@@ -98,56 +98,6 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/digit_9.png",
-                "name": "CLOCK_DIGIT_9",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_8.png",
-                "name": "CLOCK_DIGIT_8",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_7.png",
-                "name": "CLOCK_DIGIT_7",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_6.png",
-                "name": "CLOCK_DIGIT_6",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_5.png",
-                "name": "CLOCK_DIGIT_5",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_4.png",
-                "name": "CLOCK_DIGIT_4",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_3.png",
-                "name": "CLOCK_DIGIT_3",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_2.png",
-                "name": "CLOCK_DIGIT_2",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_1.png",
-                "name": "CLOCK_DIGIT_1",
-                "type": "bitmap"
-            },
-            {
-                "file": "images/digit_0.png",
-                "name": "CLOCK_DIGIT_0",
-                "type": "bitmap"
-            },
-            {
                 "file": "images/digit_bold_9.png",
                 "name": "CLOCK_DIGIT_BOLD_9",
                 "type": "bitmap"
@@ -198,6 +148,56 @@
                 "type": "bitmap"
             },
             {
+                "file": "images/digit_9.png",
+                "name": "CLOCK_DIGIT_9",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_8.png",
+                "name": "CLOCK_DIGIT_8",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_7.png",
+                "name": "CLOCK_DIGIT_7",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_6.png",
+                "name": "CLOCK_DIGIT_6",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_5.png",
+                "name": "CLOCK_DIGIT_5",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_4.png",
+                "name": "CLOCK_DIGIT_4",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_3.png",
+                "name": "CLOCK_DIGIT_3",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_2.png",
+                "name": "CLOCK_DIGIT_2",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_1.png",
+                "name": "CLOCK_DIGIT_1",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/digit_0.png",
+                "name": "CLOCK_DIGIT_0",
+                "type": "bitmap"
+            },
+            {
                 "file": "data/WEATHER_GENERIC.pdc",
                 "name": "WEATHER_GENERIC",
                 "type": "raw"
@@ -243,6 +243,16 @@
                 "type": "raw"
             },
             {
+                "file": "data/HEALTH_STEPS.pdc",
+                "name": "HEALTH_STEPS",
+                "type": "raw"
+            },
+            {
+                "file": "data/HEALTH_SLEEP.pdc",
+                "name": "HEALTH_SLEEP",
+                "type": "raw"
+            },
+            {
                 "file": "data/DISCONNECTED.pdc",
                 "name": "DISCONNECTED",
                 "type": "raw"
@@ -275,16 +285,6 @@
             {
                 "file": "data/BATTERY_BG.pdc",
                 "name": "BATTERY_BG",
-                "type": "raw"
-            },
-            {
-                "file": "data/HEALTH_SLEEP.pdc",
-                "name": "HEALTH_SLEEP",
-                "type": "raw"
-            },
-            {
-                "file": "data/HEALTH_STEPS.pdc",
-                "name": "HEALTH_STEPS",
                 "type": "raw"
             }
         ]
